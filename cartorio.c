@@ -57,7 +57,12 @@ int registro()//Função responsavel por cadastrar os usuarios no sistema
 	fprintf(file, cargo);//salva o valor da variavel
 	fclose(file);//fecha o arquivo
 	
+	printf("Aperte qualquer tecla para retornar ao menu!\n\n");
+	
 	system("pause");//pausa o programa para o usuario conseguir ler as informações
+		
+		
+	
 	
 }//Fim da Função
 
@@ -69,6 +74,7 @@ int consulta()
 	//Inicio da  criação da variavel/string	
 	char cpf[40];//
 	char conteudo[200];
+	char menu[10];
 	//final da criação variavel/string
 	printf("Digite o CPF a ser consultado:");//colentando informações do usuario
 	scanf("%s", cpf);//Armazenando as informações na variavel
@@ -87,6 +93,8 @@ int consulta()
 		printf("%s", conteudo);
 		printf("\n\n");
 	}
+	
+	printf("Aperte qualquer tecla para retornar ao menu!\n\n");
 	
 	system("pause");// pause para o usuario ler as infromações
 	
@@ -108,12 +116,12 @@ int deleta()
 	
 	if(file == NULL)//estrutura condicional para informar ao usuario que a opção é nula
 	{
-		printf("Usuario não se encontra no sistema!");
-		
-		system("pause");//pause para usuario ler as informações printadas na tela
+		printf("Usuario não se encontra no sistema!\n\n");	
 	}
 	
+	printf("\n\nCPF deletado com sucesso, aperte qualquer tecla para retornar ao menu!\n\n");
 	
+	system("pause");//pause para usuario ler as informações printadas na tela
 }// fim da função deleta
 
 int main()//função principal
@@ -156,7 +164,7 @@ int main()//função principal
 				deleta();	
 				break;
 				
-			case4:
+			case 4:
 				printf("obrigado por utilizar o sistema!\n\n ");
 				return 0;
 				break;
@@ -194,7 +202,7 @@ int main()//função principal
 			system("pause");
 		}
 		*/
-			printf("Esse software é de livre uso dos alunos EBAC\n\n");
+		
 
 }
 }
